@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NotificationTest</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="false">XYZ Bytes</string>
+    <string name="title_activity_first">First Activity</string>
+    <string name="hello_user">Hello User</string>
+
+</resources>

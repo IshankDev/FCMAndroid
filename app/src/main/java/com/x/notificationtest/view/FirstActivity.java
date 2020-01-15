@@ -25,7 +25,9 @@ public class FirstActivity extends AppCompatActivity implements FirstActivityPre
         toolbar.setTitle(R.string.title_activity_first);
         setSupportActionBar(toolbar);
 
+        //presenter initializations
         presenter = new FirstActivityPresenter(this);
+
         //to setup back button in activity
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -42,12 +44,13 @@ public class FirstActivity extends AppCompatActivity implements FirstActivityPre
 
         if (getIntent().getExtras() != null) {
 
-            //fetching data in extras and showing in TextView
+            //fetching data in extras
             Bundle b = getIntent().getExtras();
             String someData = b.getString(Constant.KEY_DATA);
 
             if (someData != null) {
 
+                //calling presenter to update view
                 presenter.updateNotiData(someData);
             }
         }
